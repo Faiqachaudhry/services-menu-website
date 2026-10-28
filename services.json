@@ -1,0 +1,44 @@
+[
+{
+"id": 1,
+"name": "Website Development",
+"category": "Web Development",
+"description": "Modern, responsive websites for your business.",
+"price": 15000
+},
+{
+"id": 2,
+"name": "Landing Page Design",
+"category": "Web Development",
+"description": "Professional landing pages to showcase your services.",
+"price": 8000
+},
+{
+"id": 3,
+"name": "UI/UX Design",
+"category": "Design",
+"description": "Clean and user-friendly website interface designs.",
+"price": 6000
+},
+{
+"id": 4,
+"name": "Logo Design",
+"category": "Design",
+"description": "Creative logos for brands and businesses.",
+"price": 3000
+},
+{
+"id": 5,
+"name": "Data Entry",
+"category": "Data Services",
+"description": "Accurate data entry and spreadsheet formatting.",
+"price": 2500
+},
+{
+"id": 6,
+"name": "Web Research",
+"category": "Data Services",
+"description": "Online research and organized data collection.",
+"price": 2000
+}
+]
