@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Order Summary | Ezitech</title>
+
+<style>
+* {
+box-sizing: border-box;
+margin: 0;
+padding: 0;
+}
+
+body {
+font-family: Arial, sans-serif;
+background: #f4f6fa;
+padding: 30px 15px;
+color: #222;
+}
+
+.summary-container {
+max-width: 750px;
+margin: 30px auto;
+background: white;
+padding: 30px;
+border-radius: 12px;
+box-shadow: 0 5px 25px rgba(0,0,0,0.08);
+}
+
+h1 {
+margin-bottom: 25px;
+color: #222;
+}
+
+.cart-item {
+display: flex;
+justify-content: space-between;
+gap: 15px;
+padding: 18px 0;
+border-bottom: 1px solid #eee;
+}
+
+.cart-item h3 {
+margin-bottom: 7px;
+}
+
+.cart-item p {
+color: #666;
+}
+
+.remove-btn {
+background: #ffe5e5;
+color: #d00;
+border: none;
+padding: 8px 12px;
+border-radius: 5px;
+cursor: pointer;
+}
+
+.total {
+text-align: right;
+font-size: 22px;
+font-weight: bold;
+margin: 25px 0;
+}
+
+.whatsapp-btn {
+display: block;
+width: 100%;
+padding: 15px;
+background: #25D366;
+color: white;
+text-align: center;
+text-decoration: none;
+border: none;
+border-radius: 7px;
+font-size: 16px;
+font-weight: bold;
+cursor: pointer;
+}
+
+.empty-message {
+color: #777;
+padding: 20px 0;
+}
+
+.back-link {
+display: inline-block;
+margin-top: 20px;
+color: #4169e1;
+text-decoration: none;
+}
+</style>
+</head>
+
+<body>
+
+<main class="summary-container">
+
+<h1>Order Summary</h1>
+
+<div id="cart-items"></div>
+
+<p id="empty-cart" class="empty-message" hidden>
+Your cart is empty.
+</p>
+
+<div class="total">
+Total: <span id="cart-total">PKR 0</span>
+</div>
+
+<button id="whatsapp-btn" class="whatsapp-btn" type="button">
+Send Order via WhatsApp
+</button>
+
+<a href="menu.html" class="back-link">
+← Back to Services
+</a>
+
+</main>
+
+<script src="cart.js" defer></script>
+<script src="summary.js" defer></script>
+
+</body>
+</html>
