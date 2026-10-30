@@ -7,7 +7,7 @@ const noResults = document.getElementById("no-results");
 let services = [];
 let selectedCategory = "All";
 let searchTerm = "";
-const cart = new Map();
+
 
 // Load services from JSON
 async function loadServices() {
@@ -88,7 +88,12 @@ button.className = "add-cart-btn";
 button.type = "button";
 
 function updateButton() {
-const quantity = cart.get(service.id) || 0;
+const cartItem = getCart().find(
+item => item.id === service.id
+);
+
+const quantity = cartItem ? cartItem.quantity : 0;
+
 button.textContent = quantity > 0
 ? `Added to Cart (${quantity})`
 : "Add to Cart";
@@ -98,15 +103,11 @@ button.setAttribute(
 `${service.name}, ${quantity} added to cart`
 );
 }
-
 updateButton();
 
 button.addEventListener("click", () => {
-const quantity = cart.get(service.id) || 0;
-cart.set(service.id, quantity + 1);
+addToCart(service);
 updateButton();
-
-console.log("Cart:", Array.from(cart.entries()));
 });
 
 bottom.append(price, button);
